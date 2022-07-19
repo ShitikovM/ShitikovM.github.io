@@ -1,0 +1,275 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Cebo";
+  font-display: swap;
+  src: url("../fonts/cebo.otf") format("woff2"), url("../fonts/cebo.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Steclo";
+  font-display: swap;
+  src: url("../fonts/steclo.otf") format("woff2"), url("../fonts/steclo.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Equinox";
+  font-display: swap;
+  src: url("../fonts/equinox.otf") format("woff2"), url("../fonts/equinox.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/montserrat.otf") format("woff2"), url("../fonts/montserrat.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Tecnica Stencil";
+  font-display: swap;
+  src: url("../fonts/tecnicastencil.otf") format("woff2"), url("../fonts/tecnicastencil.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Fira Sans";
+  font-display: swap;
+  src: url("../fonts/firasans.otf") format("woff2"), url("../fonts/firasans.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: rgb(10, 10, 11);
+  background: -moz-linear-gradient(0deg, rgb(10, 10, 11) 0%, rgb(68, 68, 68) 50%, rgb(110, 110, 110) 100%);
+  background: -webkit-linear-gradient(0deg, rgb(10, 10, 11) 0%, rgb(68, 68, 68) 50%, rgb(110, 110, 110) 100%);
+  background: linear-gradient(0deg, rgb(10, 10, 11) 0%, rgb(68, 68, 68) 50%, rgb(110, 110, 110) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0a0a0b",endColorstr="#6e6e6e",GradientType=1);
+  padding: 0 25px;
+}
+.wrapper * {
+  color: #fff;
+}
+
+.container {
+  padding: 50px 5px 0px 50px;
+  position: relative;
+  max-width: 1170px;
+  margin: 0 auto;
+  background: linear-gradient(107.46deg, rgba(255, 255, 255, 0.048) 1.21%, rgba(236, 236, 236, 0.2) 100%);
+  border: 2px solid #000000;
+  box-shadow: 0px 0px 9px #000000;
+  backdrop-filter: blur(86px);
+  border-radius: 10px;
+  width: 100%;
+  height: 60vh;
+}
+@media (max-width: 1182px) {
+  .container {
+    max-width: 970px;
+  }
+}
+@media (max-width: 991.98px) {
+  .container {
+    max-width: 750px;
+  }
+}
+@media (max-width: 767.98px) {
+  .container {
+    max-width: none;
+    height: 80vh;
+    padding: 20px;
+  }
+}
+
+.logotype {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.logotype__img {
+  width: 200px;
+  height: 60px;
+  transform: translateY(-100%);
+}
+@media (max-width: 1170px) {
+  .logotype__img {
+    width: calc(150px + 50 * ((100vw - 320px) / 850));
+  }
+}
+@media (max-width: 1170px) {
+  .logotype__img {
+    height: calc(45px + 15 * ((100vw - 320px) / 850));
+  }
+}
+
+.main-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-block__top {
+  display: flex;
+}
+@media (max-width: 767.98px) {
+  .main-block__top {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.main-block-top__img {
+  width: 250px;
+  height: 250px;
+  border: 2px solid #000000;
+  box-shadow: 0px 0px 9px #FFFFFF;
+  border-radius: 5px;
+}
+@media (max-width: 1170px) {
+  .main-block-top__img {
+    width: calc(150px + 100 * ((100vw - 320px) / 850));
+  }
+}
+@media (max-width: 1170px) {
+  .main-block-top__img {
+    height: calc(150px + 100 * ((100vw - 320px) / 850));
+  }
+}
+
+.main-block-top-text {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+}
+@media (max-width: 767.98px) {
+  .main-block-top-text {
+    padding-left: 0;
+    padding-bottom: 75px;
+    padding-top: 10px;
+  }
+}
+
+.main-block-top-text__item {
+  font-size: 20px;
+  font-family: "Steclo";
+  line-height: 24px;
+  letter-spacing: 3px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+@media (max-width: 1170px) {
+  .main-block-top-text__item {
+    font-size: calc(12px + 8 * ((100vw - 320px) / 850));
+  }
+}
+
+.main-block-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 30px;
+  right: 50%;
+  transform: translate(50%);
+}
+
+.main-block-bottom__button {
+  transition: all 1s ease;
+  padding: 10px 15px;
+  font-family: "Tecnica Stencil";
+  font-size: 23px;
+  letter-spacing: 3px;
+  border: 2px solid #000000;
+  box-shadow: 0px 0px 7px #FFFFFF;
+  text-shadow: 0px 0px 4px #FFFFFF;
+  background-color: rgba(0, 0, 0, 0);
+}
+.main-block-bottom__button:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*# sourceMappingURL=about.css.map */

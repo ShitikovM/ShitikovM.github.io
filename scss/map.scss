@@ -1,0 +1,225 @@
+@import 'main';
+
+.wrapper {
+	a:visited {
+		color: $white;
+	}
+	&* {
+		color: $white;
+		font-family: 'Tecnica Stencil';
+	}
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: rgb(10,10,11);
+	background: -moz-linear-gradient(0deg, rgba(10,10,11,1) 0%, rgba(68,68,68,1) 50%, rgba(110,110,110,1) 100%);
+	background: -webkit-linear-gradient(0deg, rgba(10,10,11,1) 0%, rgba(68,68,68,1) 50%, rgba(110,110,110,1) 100%);
+	background: linear-gradient(0deg, rgba(10,10,11,1) 0%, rgba(68,68,68,1) 50%, rgba(110,110,110,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0a0a0b",endColorstr="#6e6e6e",GradientType=1);
+}
+
+.container {
+	@media (max-width: $md1 + px) {
+		max-width: 970px;
+	}
+	@media (max-width: $md2+px) {
+		background-size: cover;
+		max-width: 750px;
+	}
+	@media (max-width: $md3+px) {
+		max-width: none;
+	}
+	max-width: $maxWidthContainer + px;
+	margin: 0 auto;
+	background-color: linear-gradient(107.46deg, rgba(255, 255, 255, 0.048) 1.21%, rgba(236, 236, 236, 0.2) 100%);
+	box-shadow: 0px 0px 9px #000000;
+	backdrop-filter: blur(86px);
+	width: 100%;
+	height: 60vh;
+}
+
+.logotype__img {
+	@include adaptiv-value(width, 200, 150, 1); 
+	@include adaptiv-value(height, 60, 45, 1);
+}
+
+.button {
+	padding: 8px 0;
+	&:first-child {
+		margin-right: 10px;
+	}
+	&:last-child {
+		margin-left: 10px;
+	}
+	@include adaptiv-value(font-size, 40, 19, 1);
+	@include adaptiv-value(width, 260, 100, 1);
+	height: 50px;
+	&:hover {
+		filter: drop-shadow(0px 0px 5px #FFFFFF);
+	}
+	cursor: pointer;
+	transform: translateX(50%);
+	transition: all .3s ease;
+	font-family: 'Tecnica Stencil';
+	text-shadow: 0px 0px 5px #FFFFFF;
+	filter: drop-shadow(0px 0px 3px #FFFFFF);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgb(10,10,11);
+	background: -moz-linear-gradient(90deg, rgba(10,10,11,1) 0%, rgba(32,32,32,1) 50%, rgba(10,10,11,1) 100%);
+	background: -webkit-linear-gradient(90deg, rgba(10,10,11,1) 0%, rgba(32,32,32,1) 50%, rgba(10,10,11,1) 100%);
+	background: linear-gradient(90deg, rgba(10,10,11,1) 0%, rgba(32,32,32,1) 50%, rgba(10,10,11,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0a0a0b",endColorstr="#0a0a0b",GradientType=1);
+}
+.button__link {
+	color: $white;
+}
+
+.buttons {
+	color: $white;
+	margin-top: 30px;
+	transform: translateX(-20%);
+	display: flex;
+}
+
+.mapboxgl-popup {
+	max-width: 400px;
+}
+
+.mapboxgl-popup-content {
+	max-width: 400px;
+}
+
+.mapboxgl-popup {
+	max-width: 400px;
+}
+
+.mapboxgl-popup-content-wrapper {
+	max-width: 400px;
+}
+
+.popup {
+	background: rgb(10,10,11);
+}
+
+.mapboxgl-popup-content {
+	background-color: rgb(10,10,11);
+	box-shadow: 0px 0px 9px #000000;
+	max-width: 250px;
+	color: $white;
+}
+
+.mapboxgl-popup-anchor-top .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-top-left .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-top-right .mapboxgl-popup-tip {
+    border-bottom-color: rgb(10,10,11);
+    }
+
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-bottom-left .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-bottom-right .mapboxgl-popup-tip {
+    border-top-color: rgb(10,10,11);
+    }
+
+.mapboxgl-popup-anchor-left .mapboxgl-popup-tip {
+    border-right-color: rgb(10,10,11);
+    }
+
+.mapboxgl-popup-anchor-right .mapboxgl-popup-tip {
+    border-left-color: rgb(10,10,11);
+    }
+
+.modal {
+	@media (max-width: $md2 + px) {
+		width: 50vw;
+	}
+	@media (max-width: $md2 + px) {
+		width: 90vw;
+	}
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	z-index: 10;
+	width: 37vw;
+	height: 36vh;
+	background: linear-gradient(107.46deg, rgba(255, 255, 255, 0.048) 1.21%, rgba(236, 236, 236, 0.2) 100%);
+	border: 2px solid #09090A;
+	box-shadow: 0px 0px 9px #000000;
+	backdrop-filter: blur(86px);
+	border-radius: 10px;
+}
+
+.modal__text {
+	@include adaptiv-value(font-size, 27, 20, 1);
+	width: 90%;
+	color: $white;
+	text-align: center;
+	font-family: 'Tecnica Stencil';
+}
+.dropbtn {
+	font-family: 'Tecnica Stencil';
+	transition: all 0.5s ease;
+	border: 2px solid #09090A;
+	border-radius: 10px;
+	background: linear-gradient(107.46deg, rgba(255, 255, 255, 0.048) 1.21%, rgba(236, 236, 236, 0.2) 100%);
+	color: white;
+	padding: 16px;
+	font-size: 16px;
+	width: 50%;
+}
+
+.dropdown {
+	transform: translateX(25%);
+	font-family: 'Cebo';
+	position: relative;
+	width: 100%;
+}
+ 
+.dropdown-content {
+	text-align: center;
+	overflow-y:scroll;
+	height:200px;
+	position: absolute;
+	background: rgb(10,10,11, 0.8);
+	width: 50%;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+ 
+.dropdown-content a {
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	color: $white;
+	font-family: 'Tecnica Stencil';
+}
+ 
+.dropdown-content a:hover {
+	background-color: $orange
+}
+
+ .dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.dropbtn:hover {
+	border-radius: 0;
+}
+
+.dropdown:hover  .dropbtn {
+	border-radius: 0;
+}
+
+.hide {
+	display: none;
+}

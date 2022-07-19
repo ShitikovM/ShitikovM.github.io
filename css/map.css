@@ -1,0 +1,380 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Cebo";
+  font-display: swap;
+  src: url("../fonts/cebo.otf") format("woff2"), url("../fonts/cebo.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Steclo";
+  font-display: swap;
+  src: url("../fonts/steclo.otf") format("woff2"), url("../fonts/steclo.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Equinox";
+  font-display: swap;
+  src: url("../fonts/equinox.otf") format("woff2"), url("../fonts/equinox.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/montserrat.otf") format("woff2"), url("../fonts/montserrat.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Tecnica Stencil";
+  font-display: swap;
+  src: url("../fonts/tecnicastencil.otf") format("woff2"), url("../fonts/tecnicastencil.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Fira Sans";
+  font-display: swap;
+  src: url("../fonts/firasans.otf") format("woff2"), url("../fonts/firasans.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+.wrapper {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: rgb(10, 10, 11);
+  background: -moz-linear-gradient(0deg, rgb(10, 10, 11) 0%, rgb(68, 68, 68) 50%, rgb(110, 110, 110) 100%);
+  background: -webkit-linear-gradient(0deg, rgb(10, 10, 11) 0%, rgb(68, 68, 68) 50%, rgb(110, 110, 110) 100%);
+  background: linear-gradient(0deg, rgb(10, 10, 11) 0%, rgb(68, 68, 68) 50%, rgb(110, 110, 110) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0a0a0b",endColorstr="#6e6e6e",GradientType=1);
+}
+.wrapper a:visited {
+  color: #fff;
+}
+.wrapper* {
+  color: #fff;
+  font-family: "Tecnica Stencil";
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  background-color: linear-gradient(107.46deg, rgba(255, 255, 255, 0.048) 1.21%, rgba(236, 236, 236, 0.2) 100%);
+  box-shadow: 0px 0px 9px #000000;
+  backdrop-filter: blur(86px);
+  width: 100%;
+  height: 60vh;
+}
+@media (max-width: 1182px) {
+  .container {
+    max-width: 970px;
+  }
+}
+@media (max-width: 991.98px) {
+  .container {
+    background-size: cover;
+    max-width: 750px;
+  }
+}
+@media (max-width: 767.98px) {
+  .container {
+    max-width: none;
+  }
+}
+
+.logotype__img {
+  width: 200px;
+  height: 60px;
+}
+@media (max-width: 1170px) {
+  .logotype__img {
+    width: calc(150px + 50 * ((100vw - 320px) / 850));
+  }
+}
+@media (max-width: 1170px) {
+  .logotype__img {
+    height: calc(45px + 15 * ((100vw - 320px) / 850));
+  }
+}
+
+.button {
+  padding: 8px 0;
+  font-size: 40px;
+  width: 260px;
+  height: 50px;
+  cursor: pointer;
+  transform: translateX(50%);
+  transition: all 0.3s ease;
+  font-family: "Tecnica Stencil";
+  text-shadow: 0px 0px 5px #FFFFFF;
+  filter: drop-shadow(0px 0px 3px #FFFFFF);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(10, 10, 11);
+  background: -moz-linear-gradient(90deg, rgb(10, 10, 11) 0%, rgb(32, 32, 32) 50%, rgb(10, 10, 11) 100%);
+  background: -webkit-linear-gradient(90deg, rgb(10, 10, 11) 0%, rgb(32, 32, 32) 50%, rgb(10, 10, 11) 100%);
+  background: linear-gradient(90deg, rgb(10, 10, 11) 0%, rgb(32, 32, 32) 50%, rgb(10, 10, 11) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0a0a0b",endColorstr="#0a0a0b",GradientType=1);
+}
+.button:first-child {
+  margin-right: 10px;
+}
+.button:last-child {
+  margin-left: 10px;
+}
+@media (max-width: 1170px) {
+  .button {
+    font-size: calc(19px + 21 * ((100vw - 320px) / 850));
+  }
+}
+@media (max-width: 1170px) {
+  .button {
+    width: calc(100px + 160 * ((100vw - 320px) / 850));
+  }
+}
+.button:hover {
+  filter: drop-shadow(0px 0px 5px #FFFFFF);
+}
+
+.button__link {
+  color: #fff;
+}
+
+.buttons {
+  color: #fff;
+  margin-top: 30px;
+  transform: translateX(-20%);
+  display: flex;
+}
+
+.mapboxgl-popup {
+  max-width: 400px;
+}
+
+.mapboxgl-popup-content {
+  max-width: 400px;
+}
+
+.mapboxgl-popup {
+  max-width: 400px;
+}
+
+.mapboxgl-popup-content-wrapper {
+  max-width: 400px;
+}
+
+.popup {
+  background: rgb(10, 10, 11);
+}
+
+.mapboxgl-popup-content {
+  background-color: rgb(10, 10, 11);
+  box-shadow: 0px 0px 9px #000000;
+  max-width: 250px;
+  color: #fff;
+}
+
+.mapboxgl-popup-anchor-top .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-top-left .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-top-right .mapboxgl-popup-tip {
+  border-bottom-color: rgb(10, 10, 11);
+}
+
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-bottom-left .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-bottom-right .mapboxgl-popup-tip {
+  border-top-color: rgb(10, 10, 11);
+}
+
+.mapboxgl-popup-anchor-left .mapboxgl-popup-tip {
+  border-right-color: rgb(10, 10, 11);
+}
+
+.mapboxgl-popup-anchor-right .mapboxgl-popup-tip {
+  border-left-color: rgb(10, 10, 11);
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  width: 37vw;
+  height: 36vh;
+  background: linear-gradient(107.46deg, rgba(255, 255, 255, 0.048) 1.21%, rgba(236, 236, 236, 0.2) 100%);
+  border: 2px solid #09090A;
+  box-shadow: 0px 0px 9px #000000;
+  backdrop-filter: blur(86px);
+  border-radius: 10px;
+}
+@media (max-width: 991.98px) {
+  .modal {
+    width: 50vw;
+  }
+}
+@media (max-width: 991.98px) {
+  .modal {
+    width: 90vw;
+  }
+}
+
+.modal__text {
+  font-size: 27px;
+  width: 90%;
+  color: #fff;
+  text-align: center;
+  font-family: "Tecnica Stencil";
+}
+@media (max-width: 1170px) {
+  .modal__text {
+    font-size: calc(20px + 7 * ((100vw - 320px) / 850));
+  }
+}
+
+.dropbtn {
+  font-family: "Tecnica Stencil";
+  transition: all 0.5s ease;
+  border: 2px solid #09090A;
+  border-radius: 10px;
+  background: linear-gradient(107.46deg, rgba(255, 255, 255, 0.048) 1.21%, rgba(236, 236, 236, 0.2) 100%);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  width: 50%;
+}
+
+.dropdown {
+  transform: translateX(25%);
+  font-family: "Cebo";
+  position: relative;
+  width: 100%;
+}
+
+.dropdown-content {
+  text-align: center;
+  overflow-y: scroll;
+  height: 200px;
+  position: absolute;
+  background: rgba(10, 10, 11, 0.8);
+  width: 50%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  color: #fff;
+  font-family: "Tecnica Stencil";
+}
+
+.dropdown-content a:hover {
+  background-color: #fe7b0c;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropbtn:hover {
+  border-radius: 0;
+}
+
+.dropdown:hover .dropbtn {
+  border-radius: 0;
+}
+
+.hide {
+  display: none;
+}
+
+/*# sourceMappingURL=map.css.map */

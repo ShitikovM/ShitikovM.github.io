@@ -1,0 +1,159 @@
+@import 'main';
+
+.wrapper {
+	padding: 0 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: rgb(10,10,11);
+	background: -moz-linear-gradient(0deg, rgba(10,10,11,1) 0%, rgba(68,68,68,1) 50%, rgba(110,110,110,1) 100%);
+	background: -webkit-linear-gradient(0deg, rgba(10,10,11,1) 0%, rgba(68,68,68,1) 50%, rgba(110,110,110,1) 100%);
+	background: linear-gradient(0deg, rgba(10,10,11,1) 0%, rgba(68,68,68,1) 50%, rgba(110,110,110,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0a0a0b",endColorstr="#6e6e6e",GradientType=1);
+}
+
+.logotype {
+	position: absolute;
+	top: 0;
+	right: 50%;
+	transform: translateX(50%);
+}
+
+.logotype__img {
+	@include adaptiv-value(width, 200, 150, 1); 
+	@include adaptiv-value(height, 60, 45, 1);
+	transform: translateY(-100%);
+}
+
+ .container {
+	@media (max-width: 450px) {
+		letter-spacing: 2px;
+	}
+	@media (max-width: 500px) {
+		font-size: 15px;
+	}
+	@media (max-width: $md1 + px) {
+		max-width: 970px;
+	}
+	@media (max-width: $md2+px) {
+		max-width: 750px;
+	}
+	@media (max-width: $md3+px) {
+		max-width: none;
+	}
+	position: relative;
+	font-weight: 700;
+	font-size: 20px;
+	letter-spacing: 3px;
+	color: $white;
+	font-family: 'Steclo';
+	display: flex;
+	height: 70vh;
+	position: relative;
+	box-sizing: border-box;
+	max-width: $maxWidthContainer + px;
+	margin: 0 auto;
+	background: linear-gradient(107.46deg, rgba(255, 255, 255, 0.048) 1.21%, rgba(236, 236, 236, 0.2) 100%);
+	border: 2px solid #000000;
+	box-shadow: 0px 0px 9px #000000;
+	backdrop-filter: blur(86px);
+	border-radius: 10px;
+	width: 100%;
+}
+.button {
+	padding: 8px 0;
+	&:first-child {
+		margin-right: 10px;
+	}
+	&:last-child {
+		margin-left: 10px;
+	}
+	@include adaptiv-value(font-size, 40, 19, 1);
+	@include adaptiv-value(width, 260, 100, 1);
+	&:hover {
+		filter: drop-shadow(0px 0px 5px #FFFFFF);
+	}
+	height: 50px;
+	transform: translateX(50%);
+	transition: all .3s ease;
+	font-family: 'Tecnica Stencil';
+	text-shadow: 0px 0px 5px #FFFFFF;
+	filter: drop-shadow(0px 0px 3px #FFFFFF);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgb(10,10,11);
+	background: -moz-linear-gradient(90deg, rgba(10,10,11,1) 0%, rgba(32,32,32,1) 50%, rgba(10,10,11,1) 100%);
+	background: -webkit-linear-gradient(90deg, rgba(10,10,11,1) 0%, rgba(32,32,32,1) 50%, rgba(10,10,11,1) 100%);
+	background: linear-gradient(90deg, rgba(10,10,11,1) 0%, rgba(32,32,32,1) 50%, rgba(10,10,11,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0a0a0b",endColorstr="#0a0a0b",GradientType=1);
+}
+
+.buttons {
+	margin-top: 30px;
+	transform: translateX(-20%);
+	display: flex;
+}
+
+.button__link {
+	color: $white;
+}
+
+.cryptocurrency {
+	&:last-child {
+		border-right: none;
+	}
+	border-right: 2px solid #000000;
+	flex: 1 1 25%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.cryptocurrency-title {
+	@media (max-width: 500px) {
+		font-size: 18px;
+	}
+	@media (max-width: 450px) {
+		font-size: 14px;
+	}
+	padding: 3px;
+	position: relative;
+	color: $white;
+	font-size: 25px;
+	text-shadow: 0px 0px 4px #000;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 10%;
+}
+
+.cryptocurrency-line {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 1.5px;
+	width: 100%;
+	background-color: #000000;
+}
+
+.cryptocurrency-box {
+	padding: 2px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	height: 90%;
+	align-items: center;
+}
+
+.cryptocurrency-box__item {
+	@media (max-width: 450px) {
+		font-size: 14px;
+	}
+	text-shadow: 0px 0px 4px #000;
+}

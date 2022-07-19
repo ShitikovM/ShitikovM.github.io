@@ -1,0 +1,311 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Cebo";
+  font-display: swap;
+  src: url("../fonts/cebo.otf") format("woff2"), url("../fonts/cebo.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Steclo";
+  font-display: swap;
+  src: url("../fonts/steclo.otf") format("woff2"), url("../fonts/steclo.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Equinox";
+  font-display: swap;
+  src: url("../fonts/equinox.otf") format("woff2"), url("../fonts/equinox.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/montserrat.otf") format("woff2"), url("../fonts/montserrat.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Tecnica Stencil";
+  font-display: swap;
+  src: url("../fonts/tecnicastencil.otf") format("woff2"), url("../fonts/tecnicastencil.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Fira Sans";
+  font-display: swap;
+  src: url("../fonts/firasans.otf") format("woff2"), url("../fonts/firasans.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+.wrapper {
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: rgb(10, 10, 11);
+  background: -moz-linear-gradient(0deg, rgb(10, 10, 11) 0%, rgb(68, 68, 68) 50%, rgb(110, 110, 110) 100%);
+  background: -webkit-linear-gradient(0deg, rgb(10, 10, 11) 0%, rgb(68, 68, 68) 50%, rgb(110, 110, 110) 100%);
+  background: linear-gradient(0deg, rgb(10, 10, 11) 0%, rgb(68, 68, 68) 50%, rgb(110, 110, 110) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0a0a0b",endColorstr="#6e6e6e",GradientType=1);
+}
+
+.logotype {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.logotype__img {
+  width: 200px;
+  height: 60px;
+  transform: translateY(-100%);
+}
+@media (max-width: 1170px) {
+  .logotype__img {
+    width: calc(150px + 50 * ((100vw - 320px) / 850));
+  }
+}
+@media (max-width: 1170px) {
+  .logotype__img {
+    height: calc(45px + 15 * ((100vw - 320px) / 850));
+  }
+}
+
+.container {
+  position: relative;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 3px;
+  color: #fff;
+  font-family: "Steclo";
+  display: flex;
+  height: 70vh;
+  position: relative;
+  box-sizing: border-box;
+  max-width: 1170px;
+  margin: 0 auto;
+  background: linear-gradient(107.46deg, rgba(255, 255, 255, 0.048) 1.21%, rgba(236, 236, 236, 0.2) 100%);
+  border: 2px solid #000000;
+  box-shadow: 0px 0px 9px #000000;
+  backdrop-filter: blur(86px);
+  border-radius: 10px;
+  width: 100%;
+}
+@media (max-width: 450px) {
+  .container {
+    letter-spacing: 2px;
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    font-size: 15px;
+  }
+}
+@media (max-width: 1182px) {
+  .container {
+    max-width: 970px;
+  }
+}
+@media (max-width: 991.98px) {
+  .container {
+    max-width: 750px;
+  }
+}
+@media (max-width: 767.98px) {
+  .container {
+    max-width: none;
+  }
+}
+
+.button {
+  padding: 8px 0;
+  font-size: 40px;
+  width: 260px;
+  height: 50px;
+  transform: translateX(50%);
+  transition: all 0.3s ease;
+  font-family: "Tecnica Stencil";
+  text-shadow: 0px 0px 5px #FFFFFF;
+  filter: drop-shadow(0px 0px 3px #FFFFFF);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(10, 10, 11);
+  background: -moz-linear-gradient(90deg, rgb(10, 10, 11) 0%, rgb(32, 32, 32) 50%, rgb(10, 10, 11) 100%);
+  background: -webkit-linear-gradient(90deg, rgb(10, 10, 11) 0%, rgb(32, 32, 32) 50%, rgb(10, 10, 11) 100%);
+  background: linear-gradient(90deg, rgb(10, 10, 11) 0%, rgb(32, 32, 32) 50%, rgb(10, 10, 11) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0a0a0b",endColorstr="#0a0a0b",GradientType=1);
+}
+.button:first-child {
+  margin-right: 10px;
+}
+.button:last-child {
+  margin-left: 10px;
+}
+@media (max-width: 1170px) {
+  .button {
+    font-size: calc(19px + 21 * ((100vw - 320px) / 850));
+  }
+}
+@media (max-width: 1170px) {
+  .button {
+    width: calc(100px + 160 * ((100vw - 320px) / 850));
+  }
+}
+.button:hover {
+  filter: drop-shadow(0px 0px 5px #FFFFFF);
+}
+
+.buttons {
+  margin-top: 30px;
+  transform: translateX(-20%);
+  display: flex;
+}
+
+.button__link {
+  color: #fff;
+}
+
+.cryptocurrency {
+  border-right: 2px solid #000000;
+  flex: 1 1 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.cryptocurrency:last-child {
+  border-right: none;
+}
+
+.cryptocurrency-title {
+  padding: 3px;
+  position: relative;
+  color: #fff;
+  font-size: 25px;
+  text-shadow: 0px 0px 4px #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 10%;
+}
+@media (max-width: 500px) {
+  .cryptocurrency-title {
+    font-size: 18px;
+  }
+}
+@media (max-width: 450px) {
+  .cryptocurrency-title {
+    font-size: 14px;
+  }
+}
+
+.cryptocurrency-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1.5px;
+  width: 100%;
+  background-color: #000000;
+}
+
+.cryptocurrency-box {
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 90%;
+  align-items: center;
+}
+
+.cryptocurrency-box__item {
+  text-shadow: 0px 0px 4px #000;
+}
+@media (max-width: 450px) {
+  .cryptocurrency-box__item {
+    font-size: 14px;
+  }
+}
+
+/*# sourceMappingURL=chart.css.map */
